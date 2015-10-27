@@ -3,10 +3,10 @@
 #define STEP 20
 main()
 {
-int huashi,ceshi=0;
+float huashi,ceshi=0;
 	while(huashi<MAX){
 	ceshi=5*(huashi-32)/9;
-	printf("%d\t%d\t\n",huashi,ceshi);
+	printf("%f\t%f\t\n",huashi,ceshi);
 	huashi+=STEP;
 	}
 }
