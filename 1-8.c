@@ -1,7 +1,7 @@
 #include<stdio.h>
 main(){
 int c;
-long kongge,zhibiao,huanhang=0;
+long kongge=0,zhibiao=0,huanhang=0;
     while((c=getchar())!=EOF){
         putchar(c);
         switch(c){
@@ -11,6 +11,6 @@ long kongge,zhibiao,huanhang=0;
             default:continue;
         }
     }
-    printf ("%ld %3ld %ld",kongge,zhibiao,huanhang);
+    printf ("%ld %3ld %ld\n",kongge,zhibiao,huanhang);
     
 }
