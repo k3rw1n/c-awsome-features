@@ -6,7 +6,7 @@ int main(){
     char line[MAXLINE];
     char logest[MAXLINE];
     int len;
-    while((len=getline(line,MAXLINE))>0)
+    while((len=getline2(line,MAXLINE))>0)
     if(len>LONGEST)
         printf("%s",line);
         return 0;
