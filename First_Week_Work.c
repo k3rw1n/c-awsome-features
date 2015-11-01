@@ -5,7 +5,7 @@ int main(){
     int c;
     int courses[7]={1,5,10,7,21,39,22};
     int i=j=0;
-    while((c=getchar())!=EOF){
+    while((c=getchar())!=EOF&&c!='5'){
         switch(c){
             case '0':
                     printf("0.help information\n"
@@ -38,12 +38,22 @@ int main(){
                     printf("enter an ID,to search whether it is one of our course\n");
                     scanf("%d",&j);
                     for(;i<=6;i++)
-                        if(j==course[i])
-                        printf("yes,it is one of our course\n");
-            case '5':
+                        if(j==course[i]){
+                            printf("yes,it is one of our course\n");
+                            j=0;
+                            break;
+                        }
+                        printf("No,we never heard this course\n");
+                        J=0;
+                        break;
+                    
+            //there needn't case '5':
+                    
             default :
             printf("Please enter an command,enter 0 to see usage\n");
             break;
         }
     }
+    pritf("thank you for your using,bye\n");
+    return 0;
 }
