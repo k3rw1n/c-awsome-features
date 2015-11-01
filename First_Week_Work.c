@@ -4,7 +4,8 @@ int main(){
     
     int c;
     int courses[7]={1,5,10,7,21,39,22};
-    int i=j=0;
+    int i=0;
+    int j=0;
     while((c=getchar())!=EOF&&c!='5'){
         switch(c){
             case '0':
@@ -30,7 +31,7 @@ int main(){
                     j=0;
             case '3':
                     for(;i<=6;i++)
-                    j=(j>=courses[i])?j:s[i];
+                    j=(j>=courses[i])?j:courses[i];
                     printf("the MAX ID of course is %d\n",j);
                     j=0;
                     break;
@@ -38,13 +39,13 @@ int main(){
                     printf("enter an ID,to search whether it is one of our course\n");
                     scanf("%d",&j);
                     for(;i<=6;i++)
-                        if(j==course[i]){
+                        if(j==courses[i]){
                             printf("yes,it is one of our course\n");
                             j=0;
                             break;
                         }
                         printf("No,we never heard this course\n");
-                        J=0;
+                        j=0;
                         break;
                     
             //there needn't case '5':
@@ -54,6 +55,6 @@ int main(){
             break;
         }
     }
-    pritf("thank you for your using,bye\n");
+    printf("thank you for your using,bye\n");
     return 0;
 }
