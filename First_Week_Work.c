@@ -51,7 +51,7 @@ int main(){
             //there needn't case '5':
                     
             default :
-            printf("Please enter an command,enter 0 to see usage\n");
+            printf("\nPlease enter an command,enter 0 to see usage\n");
             break;
         }
     }
