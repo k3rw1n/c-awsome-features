@@ -29,6 +29,7 @@ int main(){
                     i=0;
                     printf("the totall count of courses is %d\n",j);
                     j=0;
+                    break;
             case '3':
                     for(i=0;i<=6;i++)
                     j=(j>=courses[i])?j:courses[i];
