@@ -30,7 +30,7 @@ int main(){
                     printf("the totall count of courses is %d\n",j);
                     j=0;
             case '3':
-                    for(;i<=6;i++)
+                    for(i=0;i<=6;i++)
                     j=(j>=courses[i])?j:courses[i];
                     printf("the MAX ID of course is %d\n",j);
                     j=0;
