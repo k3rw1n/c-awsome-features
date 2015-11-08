@@ -30,8 +30,8 @@ void judge(int c){
                     
                     break;
             case '3':
-                    for(i=0;i<COURSES_NUMBER;i++)
                     char m[15];
+                    for(i=0;i<COURSES_NUMBER;i++)
                     // j=(j>=strlen(courses[i]))?j:strlen(courses[i]);
                     if(strlen(courses[i])>j)
                     {
@@ -47,7 +47,7 @@ void judge(int c){
                     char x[15];
                     scanf("%s",x);
                     for(;i<COURSES_NUMBER;i++)
-                        if(!strcmp(*x, courses[i])){
+                        if(!strcmp(x, courses+i)){
                             printf("yes,it is one of our course\n");
                             // j=0;
                             printf("It's %s",courses[i]);
