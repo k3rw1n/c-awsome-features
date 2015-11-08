@@ -31,17 +31,26 @@ void judge(int c){
                     break;
             case '3':
                     for(i=0;i<COURSES_NUMBER;i++)
-                    j=(j>=strlen(courses[i]))?j:strlen(courses[i]);
-                    printf("the course who have the longest length name is %s\n",j);
+                    char *m;
+                    // j=(j>=strlen(courses[i]))?j:strlen(courses[i]);
+                    if(strlen(courses[i])>j)
+                    {
+                        j=strlen(courses[i]);
+                        *m=courses[i];
+                    }
+                    
+                    printf("the course who has the longest name is %s\n",*m);
                     // j=0;
                     break;
             case '4':
-                    printf("enter an ID,to search whether it is one of our course\n");
-                    scanf("%d",&j);
-                    for(;i<=6;i++)
-                        if(j==courses[i]){
+                    printf("enter an course name,to search whether it is one of our course\n");
+                    char x[];
+                    scanf("%s",x);
+                    for(;i<COURSES_NUMBER;i++)
+                        if(!strcmp(*x, courses[i])){
                             printf("yes,it is one of our course\n");
                             // j=0;
+                            printf("It's %s",courses[i]);
                             break;
                         }
                         printf("No,we never heard this course\n");
