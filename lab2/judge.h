@@ -31,12 +31,12 @@ void judge(int c){
                     break;
             case '3':
                     for(i=0;i<COURSES_NUMBER;i++)
-                    char *m;
+                    char m[15];
                     // j=(j>=strlen(courses[i]))?j:strlen(courses[i]);
                     if(strlen(courses[i])>j)
                     {
                         j=strlen(courses[i]);
-                        *m=courses[i];
+                        strcpy(m,courses+i);
                     }
                     
                     printf("the course who has the longest name is %s\n",*m);
@@ -44,7 +44,7 @@ void judge(int c){
                     break;
             case '4':
                     printf("enter an course name,to search whether it is one of our course\n");
-                    char x[];
+                    char x[15];
                     scanf("%s",x);
                     for(;i<COURSES_NUMBER;i++)
                         if(!strcmp(*x, courses[i])){
