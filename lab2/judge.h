@@ -6,7 +6,7 @@
 
 char *courses[COURSES_NUMBER]={"Linux", "C++", "HTML", "HTML5", "NodeJS", "Shell" ,"Python"};
 
-void judge(int c){
+int judge(int c){
     int i,j=0;
     switch(c){
             case '0':
@@ -30,6 +30,7 @@ void judge(int c){
                     
                     break;
             case '3':
+                    {
                     char m[15];
                     for(i=0;i<COURSES_NUMBER;i++)
                     // j=(j>=strlen(courses[i]))?j:strlen(courses[i]);
@@ -42,6 +43,7 @@ void judge(int c){
                     printf("the course who has the longest name is %s\n",*m);
                     // j=0;
                     break;
+                    }
             case '4':
                     printf("enter an course name,to search whether it is one of our course\n");
                     char x[15];
@@ -63,4 +65,4 @@ void judge(int c){
             printf("\n\n\nPlease enter an command,enter 0 to see usage\n>>");
             break;
 }
-void judge(int c);
+int judge(int c);
