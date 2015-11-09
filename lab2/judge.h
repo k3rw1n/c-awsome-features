@@ -6,7 +6,7 @@
 
 char *courses[COURSES_NUMBER]={"Linux", "C++", "HTML", "HTML5", "NodeJS", "Shell" ,"Python"};
 
-int judge(int c){
+void judge(int c){
     int i,j=0;
     switch(c){
             case '0':
@@ -65,4 +65,4 @@ int judge(int c){
             printf("\n\n\nPlease enter an command,enter 0 to see usage\n>>");
             break;
 }
-int judge(int c);
+void judge(int c);
