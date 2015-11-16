@@ -28,14 +28,14 @@ void judge(int c){
                     {
                     printf("our courses contains:\n");
                     for(i=0;i<COURSES_NUMBER;i++)
-                    printf("%3d%s\t",courses[i]->id,courses[i]->name);
+                    printf("%3d--%s\t",courses[i].id,courses[i].name);
                     printf("\n");
                     // i=0;
                     break;
                     }
             case '2':
                     {
-                    printf("the totall count of courses is %d\n",COURSES_NUMBER);
+                    printf("the totall count of courses is %lu\n",COURSES_NUMBER);
                     break;
                     }
             case '3':
@@ -43,28 +43,30 @@ void judge(int c){
                     char m[15];
                     for(i=0;i<COURSES_NUMBER;i++)
                     
-                    if(strlen(courses[i]->name)>j)
+                    if(strlen(courses[i].name)>j)
                     {
-                        j=strlen(courses[i]->name);
-                        strcpy(m,courses[i]->name);
+                        j=strlen(courses[i].name);
+                        strcpy(m,courses[i].name);
                     }
                     printf("the course who has the longest name is %s\n",m);
                     break;
                     }
             case '4':
+                    {
                     printf("enter an course name and its ID,to search whether it is one of our course\n");
-                    char x[15];
-                    printf("please enter the course name");
+                    char x[15]={0};
+                    int tmp;
+                    printf("please enter the course name:  ");
                     scanf("%s",x);
-                    printf("please enter the id");
-                    while(getchar()!='\n')
-                    ;
+                    printf("please enter the id:  ");
+                    scanf("%d",&tmp);
                     
-                    for(;i<COURSES_NUMBER;i++)
+                    for(i=0;i<COURSES_NUMBER;i++)
                         if(!strcmp(x, (courses+i)->name)){
                             printf("yes,it is one of our course\n");
                             
-                            printf("It's %s",courses[i]->name);
+                            printf("and it's %s",courses[i].name);
+                            x[14]=1;
                             break;
                         }
                         if((i==COURSES_NUMBER-1)&&x[14]==0)
