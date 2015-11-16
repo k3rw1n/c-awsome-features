@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include"judge.h"
 int main(){
-    printf("Hi,this is KILLERHACK's secondt week homework\n");
+    printf("Hi,this is KILLERHACK's Third week homework\n");
     
     int c;
     
