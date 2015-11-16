@@ -5,8 +5,8 @@
 #include<string.h>
 
 struct course{
-    int id,
-    char * name
+    int id;
+    char * name;
 }courses[]={
     1,"Linux",5,"C++",10,"HTML",7,"HTML5",21,"NodeJS",39,"Shell",22,"Python"
 };
