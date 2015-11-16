@@ -59,10 +59,10 @@ void judge(int c){
                             printf("yes,it is one of our course\n");
                             // j=0;
                             printf("It's %s\n",courses[i]);
-                            X[14]=1;//flag
+                            x[14]=1;//flag
                             break;
                         }
-                        if((i==COURSES_NUMBER-1)&&flag==0)
+                        if((i==COURSES_NUMBER-1)&&x[14]==0)
                         printf("No,we never heard this course\n");
                      
                         break;
