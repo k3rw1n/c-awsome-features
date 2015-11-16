@@ -52,17 +52,19 @@ void judge(int c){
             case '4':
                     {
                     printf("enter an course name,to search whether it is one of our course\n");
-                    char x[15];
+                    char x[15]={0};
                     scanf("%s",x);
-                    for(;i<COURSES_NUMBER;i++)
+                    for(i=0;i<COURSES_NUMBER;i++)
                         if(!strcmp(x, courses[i])){
                             printf("yes,it is one of our course\n");
                             // j=0;
-                            printf("It's %s",courses[i]);
+                            printf("It's %s\n",courses[i]);
+                            X[14]=1;//flag
                             break;
                         }
+                        if((i==COURSES_NUMBER-1)&&flag==0)
                         printf("No,we never heard this course\n");
-                        // j=0;
+                     
                         break;
                     }
                     
