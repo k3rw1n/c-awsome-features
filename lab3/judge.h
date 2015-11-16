@@ -1,10 +1,17 @@
 #ifndef COURSES_NUMBER
-#define COURSES_NUMBER 7
+#define COURSES_NUMBER (sizeof courses /sizeof courses[0])
 #endif
 
 #include<string.h>
 
-char *courses[COURSES_NUMBER]={"Linux", "C++", "HTML", "HTML5", "NodeJS", "Shell" ,"Python"};
+struct course{
+    int ID,
+    char * name
+}courses[]={
+    1,"Linux",5,"C++",10,"HTML",7,"HTML5",21,"NodeJS",39,"Shell",22,"Python"
+};
+
+// char *courses[COURSES_NUMBER]={"Linux", "C++", "HTML", "HTML5", "NodeJS", "Shell" ,"Python"};
 
 void judge(int c){
     int i,j=0;
