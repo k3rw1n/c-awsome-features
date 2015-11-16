@@ -10,6 +10,7 @@ void judge(int c){
     int i,j=0;
     switch(c){
             case '0':
+                    {
                     printf("0.help information\n"
                             "1.print all the class name of shiyanlou\n"
                             "2.print the totall count of courses\n"
@@ -17,18 +18,22 @@ void judge(int c){
                             "4.enter an course name,to search whether it is one of our course\n"
                             "5.quit the course\n");
                             break;
+                    }
             case '1':
+                    {
                     printf("our courses contains:\n");
                     for(;i<COURSES_NUMBER;i++)
                     printf("%s\t",courses[i]);
                     printf("\n");
                     // i=0;
                     break;
+                    }
             case '2':
-                    
+                    {
                     printf("the totall count of courses is %d\n",COURSES_NUMBER);
                     
                     break;
+                    }
             case '3':
                     {
                     char m[15];
@@ -45,6 +50,7 @@ void judge(int c){
                     break;
                     }
             case '4':
+                    {
                     printf("enter an course name,to search whether it is one of our course\n");
                     char x[15];
                     scanf("%s",x);
@@ -58,11 +64,16 @@ void judge(int c){
                         printf("No,we never heard this course\n");
                         // j=0;
                         break;
+                    }
                     
             //there needn't case '5':
                     
             default :
+            {
             printf("\n\n\nPlease enter an command,enter 0 to see usage\n>>");
             break;
+                
+            }
+}
 }
 void judge(int c);
