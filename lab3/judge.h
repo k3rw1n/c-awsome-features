@@ -27,7 +27,7 @@ void judge(int c){
             case '1':
                     printf("our courses contains:\n");
                     for(;i<COURSES_NUMBER;i++)
-                    printf("%s\t",courses[i]);
+                    printf("%s\t",courses[i].name);
                     printf("\n");
                     // i=0;
                     break;
@@ -41,10 +41,10 @@ void judge(int c){
                     char m[15];
                     for(i=0;i<COURSES_NUMBER;i++)
                     // j=(j>=strlen(courses[i]))?j:strlen(courses[i]);
-                    if(strlen(courses[i])>j)
+                    if(strlen(courses[i].name)>j)
                     {
-                        j=strlen(courses[i]);
-                        strcpy(m,courses+i);
+                        j=strlen(courses[i].name);
+                        strcpy(m,(courses+i)->name);
                     }
                     
                     printf("the course who has the longest name is %s\n",*m);
