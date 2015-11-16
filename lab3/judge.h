@@ -5,13 +5,13 @@
 #include<string.h>
 
 struct course{
-    int ID,
+    int id,
     char * name
 }courses[]={
     1,"Linux",5,"C++",10,"HTML",7,"HTML5",21,"NodeJS",39,"Shell",22,"Python"
 };
 
-// char *courses[COURSES_NUMBER]={"Linux", "C++", "HTML", "HTML5", "NodeJS", "Shell" ,"Python"};
+
 
 void judge(int c){
     int i,j=0;
@@ -23,13 +23,18 @@ void judge(int c){
                             "3.print the course whose name is longest\n"
                             "4.enter an course name,to search whether it is one of our course\n"
                             "5.quit the course\n");
+                   
                             break;
             case '1':
                     printf("our courses contains:\n");
                     for(;i<COURSES_NUMBER;i++)
-                    printf("%s\t",courses[i].name);
+                    printf("%3d%s\t",courses[i].id,courses[i].name);
                     printf("\n");
                     // i=0;
+                    FILE *fp;
+                    fp=fopen("/tmp/courselist.txt","w");
+                    for(;i<COURSES_NUMBER;i++)
+                    fprintf(fp,"%3d%s\t",courses[i].id,courses[i].name);
                     break;
             case '2':
                     
@@ -47,7 +52,7 @@ void judge(int c){
                         strcpy(m,(courses+i)->name);
                     }
                     
-                    printf("the course who has the longest name is %s\n",*m);
+                    printf("the course who has the longest name is %s\n",m);
                     // j=0;
                     break;
                     }
