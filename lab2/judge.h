@@ -4,7 +4,7 @@
 
 #include<string.h>
 
-char *courses[COURSES_NUMBER]={"Linux", "C++", "HTML", "HTML5", "NodeJS", "Shell" ,"Python"};
+char * courses[COURSES_NUMBER]={"Linux", "C++", "HTML", "HTML5", "NodeJS", "Shell" ,"Python"};
 
 void judge(int c){
     int i,j=0;
@@ -22,7 +22,7 @@ void judge(int c){
             case '1':
                     {
                     printf("our courses contains:\n");
-                    for(;i<COURSES_NUMBER;i++)
+                    for(i=0;i<COURSES_NUMBER;i++)
                     printf("%s\t",courses[i]);
                     printf("\n");
                     // i=0;
@@ -42,10 +42,10 @@ void judge(int c){
                     if(strlen(courses[i])>j)
                     {
                         j=strlen(courses[i]);
-                        strcpy(m,courses+i);
+                        strcpy(m,courses[i]);
                     }
                     
-                    printf("the course who has the longest name is %s\n",*m);
+                    printf("the course who has the longest name is %s\n",m);
                     // j=0;
                     break;
                     }
@@ -55,7 +55,7 @@ void judge(int c){
                     char x[15];
                     scanf("%s",x);
                     for(;i<COURSES_NUMBER;i++)
-                        if(!strcmp(x, courses+i)){
+                        if(!strcmp(x, courses[i])){
                             printf("yes,it is one of our course\n");
                             // j=0;
                             printf("It's %s",courses[i]);
