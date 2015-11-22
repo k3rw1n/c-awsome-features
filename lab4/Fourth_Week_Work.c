@@ -18,6 +18,7 @@ int main(){
 
 void judge(int c){
     int i,j=0;
+    int fd;
     switch(c){
             case '0':
                     {
@@ -97,4 +98,5 @@ void judge(int c){
             break;
                 
             }
+}
 }
