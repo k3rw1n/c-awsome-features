@@ -26,10 +26,16 @@ void judge(int c){
                     }
             case '1':
                     {
+                    FILE *fp;   
+                    fp=fopen("/tmp/courses_list.txt","w");
                     printf("our courses contains:\n");
                     for(i=0;i<COURSES_NUMBER;i++)
-                    printf("%3d--%s\t",courses[i].id,courses[i].name);
+                    {
+                        printf("%3d--%s\t",courses[i].id,courses[i].name);
+                        fprintf(fp,"%3d--%s\t",courses[i].id,courses[i].name);
+                    }
                     printf("\n");
+                    fclose(fp);
                     // i=0;
                     break;
                     }
